@@ -1,1 +1,2 @@
-
+npm i -g create-create-react-app <!--creating an application, download the neccesarry utilities, will set them up  -->
+create-react-app todo
