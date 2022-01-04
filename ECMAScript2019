@@ -109,7 +109,7 @@ console.log(firstName,lastName);
 //если объекта нет
 //const {permissions: {role = 'user'}} = person; // этод код выдаст ошибку, т.к.permissions не существует
 //console.log(role);
-// для того, что бы это обойти, если permissions объект по умолчанию
+// для того, что бы это обойти, если permissions надо сделать объектом по умолчанию = {}
 const {permissions: {role = 'user'} = {}} = person; // этод код выдаст ошибку, т.к.permissions не существует
 console.log(role);
 
