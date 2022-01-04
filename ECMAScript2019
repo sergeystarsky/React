@@ -149,3 +149,7 @@ const [ , a, , b ] = fib;
 console.log(a, b);
 
 
+
+const line = [[10,17],[14,7]];
+const[[p1x, p1y], [p2x, p2y]]= line; // присваиваем массив
+console.log(p1x, p1y, p2x, p2y)
