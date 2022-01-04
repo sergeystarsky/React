@@ -106,4 +106,10 @@ const person ={
 const { name: {first: firstName, last: lastName}} = person; //поле first, которое достаем из объекта можно переименовать в константу firstName
 console.log(firstName,lastName);
 
+//если объекта нет
+//const {permissions: {role = 'user'}} = person; // этод код выдаст ошибку, т.к.permissions не существует
+//console.log(role);
+// для того, что бы это обойти, если permissions объект по умолчанию
+const {permissions: {role = 'user'} = {}} = person; // этод код выдаст ошибку, т.к.permissions не существует
+console.log(role);
 
