@@ -33,6 +33,9 @@ const res = arr
     .reduce((max, value)=> (max, value), 0); // функция reduce пройдет по оставшиммся значениям, выполнит передаваемую функцию сохраняя результат
 
 console.log(res);
+
+
+
 const greeter = {
     greet: function (name){
         console.log('Hello', name);
@@ -113,3 +116,23 @@ console.log(firstName,lastName);
 const {permissions: {role = 'user'} = {}} = person; // этод код выдаст ошибку, т.к.permissions не существует
 console.log(role);
 
+// можем выборочно указывать необходимое значение нужного параметра, и менятся будет только он, например port
+
+function connect({
+                     host = 'localhost',
+                     port =12345,
+                     user = 'guest'
+                 }){
+    console.log('user:', user, 'port:', port, 'host:', host);
+}
+connect({port:1111});
+
+//функция без параметров не вызыввается, но можно присвоить значение по умолчанию ={}
+function connect({
+                     host = 'localhost',
+                     port =12345,
+                     user = 'guest'
+                 }= {}){
+    console.log('user:', user, 'port:', port, 'host:', host);
+}
+connect();
