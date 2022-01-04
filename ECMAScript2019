@@ -82,5 +82,28 @@ console.log(res);
 const shallowcopy = [...arr1, ...arr2, 41];
 console.log(shallowcopy);
 
+//Destructuring - Деструктуризация позволяет лаконично достать из структуры данных, масиива или объекта
+
+const person = {
+   firstName: 'Peter',
+   lastName: 'Smith',
+   age: 27
+}
+const firstName = person.firstName;
+const lastName= person.lastName;
+
+const{firstName, lastName} = person;
+console.log(firstName, lastName)
+
+// если объекты во вложении
+
+const person ={
+    name:{
+        first: 'Peter',
+        last: 'Smith'
+    }
+}
+const { name: {first: firstName, last: lastName}} = person; //поле first, которое достаем из объекта можно переименовать в константу firstName
+console.log(firstName,lastName);
 
 
