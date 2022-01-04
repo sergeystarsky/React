@@ -1,0 +1,86 @@
+let name = 'Joe';
+name= "Bob";
+
+const person = {name: 'Joe', age: 25};
+
+person.name = 'Bob';
+
+console.log(person)
+
+if (true) {
+    let a = 1;
+}
+
+for (let i=0;i<3;i++){
+    setTimeout(function (){
+        console.log(i)
+    }, i*100);
+}
+
+function square(x){
+    return x*x;
+}
+
+
+const sq = (x,y) => x*y;
+console.log(sq(2, 3))
+
+// найдем макимальное не четное число
+const arr = ['1', '2', '3', '4'];
+const res = arr
+    .map((el)=>parseInt(el)) // фунция map преобразует массив,  ParseInt преобразует массив в числа
+    .filter((num)=>num%2)// пробижится по элементам массива, останутся те элементы,  функция которых вернет true
+    .reduce((max, value)=> (max, value), 0); // функция reduce пройдет по оставшиммся значениям, выполнит передаваемую функцию сохраняя результат
+
+console.log(res);
+const greeter = {
+    greet: function (name){
+        console.log('Hello', name);
+    },
+    greetAll: function(names){
+        names.forEach((name)=>{this.greet(name);
+        });
+    }
+};
+
+greeter.greetAll(['Bob', 'Mark', 'Pete']);
+
+
+//  Параметры по умолчанию
+// (Default Parameters)
+
+function  fetchOrders(count = 10, start = 0){
+    console.log('Getting', count,
+        'orders starting from', start);
+}
+fetchOrders(15,)
+
+function findProducts(opts = {minPrice:10, maxPrice:20}){
+    console.log(opts);
+ }
+ findProducts(); // по умолчанию передается указанное значение
+ findProducts({});// если перадаем значение, то передается объект который передаем
+
+//Rest parametr
+// Собирает несколько независимых параметров в массив, Rest параметр последний в списке, может быть один в функции
+function max (a,b,...numbers) {
+    console.log(numbers);
+}
+
+max(1,2,3); // 3 ка единственный элеммент массива
+
+
+//Spread operator
+// Раскладывает массив на список незавимых параметров
+const arr1 = [1, 2, 3];
+const arr2 = [4, 7 ,1]
+
+const res = Math.max(41, ... arr1, 5,  ...arr2, 10);
+console.log(res);
+
+//shallowcopy, поверхностная копия,  создаем новый массив, но все элементы остаются как и в предыдущем массиве
+const shallowcopy = [...arr1, ...arr2, 41];
+console.log(shallowcopy);
+
+
+
