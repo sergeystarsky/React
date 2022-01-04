@@ -137,3 +137,15 @@ function connect({
     console.log('user:', user, 'port:', port, 'host:', host);
 }
 connect();
+
+//Array Destructing Деструкторизация с массивами
+const fib = [1, 1, 2, 3, 5, 8, 13];
+const [a,b,c] = fib;
+console.log(a,b,c);
+
+// Выводим 2 е и 4 е значение
+const fib = [1, 1, 2, 3, 5, 8, 13];
+const [ , a, , b ] = fib;
+console.log(a, b);
+
+
