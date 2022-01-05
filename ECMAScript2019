@@ -189,3 +189,13 @@ const shape = {
 
 const{coordinates: {start: [startX, startY], end:[endX,endY]}} = shape;// coordinates -объект, втнутри 2 массива start и end: startX, startY, endX, endY константы в которые мы сохраняем элементы массива
 console.log(startX, startY, endX, endY);
+
+
+//Temlate Literals, шаблонные строки
+const user = 'Bob';
+const num = 17;
+const txt = 'Hello, '+ user + ' you have ' + num + ' letters in your inbox';
+
+const txt2 =`Hello ${user} you ${num} letters in your inbox`; //txt2 более компактный код, использовать обратные кавычки`````
+
+console.log(txt2);
