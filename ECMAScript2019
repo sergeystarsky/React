@@ -199,3 +199,21 @@ const txt2 =`Hello ${user} you ${num} letters in your inbox`; //txt2 более 
 const txt3 =`Now is ${Date.now()}`;// можно поставить результат вызова функции
 
 console.log(txt2);
+
+
+// Многострочный код, строка состоящая из набора подстрок
+
+const html =
+    '<ul>' +
+    '<li>Item One</li>>'+
+    '<li>Item Two</li>>'+
+    '</ul>';
+
+const temlateHtml = `  //обратные кавычки, бэктик
+    <ul>
+    <li>Item One </li>
+    <li>Item Two</li>
+    </ul>>
+    `
+
+console.log(temlateHtml)
