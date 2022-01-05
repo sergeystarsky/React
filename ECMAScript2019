@@ -254,3 +254,20 @@ const data = {
 };
 
 console.log(data);
+
+//Функция позволяет копировать свойства из одного объекта в другой
+//Есть два объекта, один хранит опции по умолчанию, второй хранит опции от пользователя, мы хотим их объединить, то что пердал пользователь имеет более выскоий приоритет
+
+const defaults = {
+    host:'localhost',
+    dbName:'blog',
+    user:'admin'
+};
+
+const opts = {
+    user: 'john',
+    password: 'utopia'
+};
+// что бы не перезатирать default, добавим пустой объект{}  и в него сначала скопируем defaults, затем opts
+const res = Object.assign( {}, defaults, opts); //запишет defaults, поверх них запишет opts, заменит user, добавит password
+console.log(res);
