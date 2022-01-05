@@ -283,7 +283,7 @@ console.log (shallowCopy);
 
 
 // Spread operator for Objects
-
+//Пример 1
 const  defaults = {
     host: 'localhost',
     dbName: 'blog',
@@ -296,4 +296,20 @@ const opts = {
 };
 
 const res = {...defaults, ...opts};
+console.log(res)
+
+// Пример 2
+
+const  defaults = { "host": 'localhost'};
+const opts = {"user": 'john'};
+//кобнинируем текущие свойства - defaults, opts, добавляем новые - port и определяем новый метод connect()
+const port = 8080; // новая const port
+const res = {
+    ...defaults,     
+    ...opts,
+    port,           //добавим port
+    connect(){      // добавим метод connect
+
+    }
+};
 console.log(res)
