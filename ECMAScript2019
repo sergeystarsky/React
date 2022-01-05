@@ -317,6 +317,8 @@ console.log(res)
 
 // Prototipes
 // setPrototypeOf-негативно сказывается на производительности приложения
+
+Пример 1
 const animal = {
     say: function () {
         console.log(this.name, 'goes', this.voice);
