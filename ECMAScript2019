@@ -271,3 +271,12 @@ const opts = {
 // что бы не перезатирать default, добавим пустой объект{}  и в него сначала скопируем defaults, затем opts
 const res = Object.assign( {}, defaults, opts); //запишет defaults, поверх них запишет opts, заменит user, добавит password
 console.log(res);
+
+//создаем shallowCopy
+const person = {
+    name:'Bob',
+    friends:['Mark','Jacob']
+};
+const shallowCopy2 =Object.assign({}, person);// при помощи Object.assign мы хотим добавить все свойства из объекта person
+person.friends.push('Jane'); // если в масссиве person добавить имя Jane, то оно появится и в масииве shallowCopy
+console.log (shallowCopy);
