@@ -230,3 +230,16 @@ const temlateHtml = `
     `
 
 console.log(temlateHtml)
+
+// Objects, создание объектов
+
+const x = 10;
+const y = 30;
+
+const p={
+    x,
+    y
+    draw(ctx){    // параметры функции 
+        // тело функции
+    }
+};
