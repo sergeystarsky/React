@@ -269,7 +269,7 @@ const opts = {
     password: 'utopia'
 };
 // что бы не перезатирать default, добавим пустой объект{}  и в него сначала скопируем defaults, затем opts
-const res = Object.assign( {}, defaults, opts); //запишет defaults, поверх них запишет opts, заменит user, добавит password
+const res = Object.assign( {}, defaults, opts); //запишет defaults, поверх них запишет opts, заменит user, добавит password {} - куда записываем, defaults, opts - что записываем слева направо
 console.log(res);
 
 //создаем shallowCopy
