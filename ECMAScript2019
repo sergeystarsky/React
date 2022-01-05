@@ -313,3 +313,27 @@ const res = {
     }
 };
 console.log(res)
+
+
+// Prototipes
+// setPrototypeOf-негативно сказывается на производительности приложения
+const animal = {
+    say: function () {
+        console.log(this.name, 'goes', this.voice);
+    }
+};
+
+const dog ={
+    name: 'dog',
+    voice: 'woof',
+};
+Object.setPrototypeOf(dog, animal); //создаем связь прототипа и объекта теперь animal прототип объекта dog
+
+const cat = {
+    name: 'cat',
+    voice: 'meow',
+};
+Object.setPrototypeOf(cat, animal); //создаем связь прототипа и объекта теперь animal прототип объекта cat
+
+dog.say();
+cat.say();
