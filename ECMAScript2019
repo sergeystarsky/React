@@ -243,3 +243,14 @@ const p={
         // тело функции
     }
 };
+
+
+// данная конструкция редко используется
+const prefix = '_blah_';
+
+const data = {
+    [prefix+ 'name']: 'Bob',
+    [prefix+'age']:23
+};
+
+console.log(data);
