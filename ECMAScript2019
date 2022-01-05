@@ -153,3 +153,39 @@ console.log(a, b);
 const line = [[10,17],[14,7]];
 const[[p1x, p1y], [p2x, p2y]]= line; // присваиваем массив
 console.log(p1x, p1y, p2x, p2y)
+
+
+const people = ['chris', 'sandra'];
+const [d, e, k  = 'guest' ] = people; // 2 значения из массива, 3 е 'quest' по умолчанию
+console.log(d,e,k);
+
+
+const people = ['chris', 'sandra', 'bob'];
+const [e, ...others] = people;
+console.log(... others);
+
+
+const  dict = {
+    duck: 'quack',
+    dog: 'wuff',
+    mouse: 'squeak',
+    hamster: 'squeak'
+};
+const res = Object.entries(dict) // получаем массив key, value
+    .filter(([ ,value])=>value=='squeak') // выводим элементы массива, где второе значение 'squeak'
+    .map(([key])=>key);// выводим ключ
+
+console.log(res);
+
+
+// Объект, внутри которого есть массив, хотим получить координаты точек
+const shape = {
+    type: 'segment',
+    coordinates:{
+        start:[10,15],
+        end:[17,15]
+    }
+}
+
+const{coordinates: {start: [startX, startY], end:[endX,endY]}} = shape;// coordinates -объект, втнутри 2 массива start и end: startX, startY, endX, endY константы в которые мы сохраняем элементы массива
+console.log(startX, startY, endX, endY);
