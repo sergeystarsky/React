@@ -354,3 +354,41 @@ dog.name ='Dog';
 dog.voice ='Woof';
 
 dog.say();
+
+//Пример 3
+// Фактически это функция конструктор
+
+const animal = {
+    say: function () {
+        console.log(this.name, 'goes', this.voice);
+    }
+};
+// логика создания животного в отдельной функции
+function createAnimal(name,voice){
+    const result = Object.create(animal); 
+    result.voice = voice;
+    return result;
+}
+
+const dog =createAnimal('Dog', 'woof');
+const cat =createAnimal('Cat', 'meow');
+
+dog.say();
+cat.say();
+
+//Пример 4
+
+function Animal(name,voice){
+    this.name = name;
+    this.voice = voice;
+}
+
+Animal.prototype.say = function() {
+    console.log(this.name, 'goes', this.voice);
+};
+
+const dog =new Animal('Dog', 'woof');
+const cat =new Animal('Cat', 'meow');
+
+dog.say();
+cat.say();
