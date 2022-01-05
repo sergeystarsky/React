@@ -213,7 +213,20 @@ const temlateHtml = `  //обратные кавычки, бэктик
     <ul>
     <li>Item One </li>
     <li>Item Two</li>
-    </ul>>
+    </ul>
+    `
+
+console.log(temlateHtml)
+
+//Можем добавить js код в наше выражение используя ${}
+
+const items =['tea', 'cofee']
+
+const temlateHtml = `
+    <ul>
+    <li>${items[0]}</li>
+    <li>${items[1]}</li>
+    </ul>
     `
 
 console.log(temlateHtml)
