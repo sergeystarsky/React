@@ -277,6 +277,6 @@ const person = {
     name:'Bob',
     friends:['Mark','Jacob']
 };
-const shallowCopy2 =Object.assign({}, person);// при помощи Object.assign мы хотим добавить все свойства из объекта person
+const shallowCopy = Object.assign({}, person);// при помощи Object.assign мы хотим добавить все свойства из объекта person
 person.friends.push('Jane'); // если в масссиве person добавить имя Jane, то оно появится и в масииве shallowCopy
 console.log (shallowCopy);
