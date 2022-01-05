@@ -195,7 +195,7 @@ console.log(startX, startY, endX, endY);
 const user = 'Bob';
 const num = 17;
 const txt = 'Hello, '+ user + ' you have ' + num + ' letters in your inbox';
-
 const txt2 =`Hello ${user} you ${num} letters in your inbox`; //txt2 более компактный код, использовать обратные кавычки`````
+const txt3 =`Now is ${Date.now()}`;// можно поставить результат вызова функции
 
 console.log(txt2);
