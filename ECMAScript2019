@@ -85,7 +85,7 @@ console.log(res);
 const shallowcopy = [...arr1, ...arr2, 41];
 console.log(shallowcopy);
 
-//Destructuring - Деструктуризация позволяет лаконично достать из структуры данных, масиива или объекта
+//Destructuring - Деструктуризация позволяет лаконично достать элемент из структуры данных, масиива или объекта
 
 const person = {
    firstName: 'Peter',
