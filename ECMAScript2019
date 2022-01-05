@@ -280,3 +280,20 @@ const person = {
 const shallowCopy = Object.assign({}, person);// при помощи Object.assign мы хотим добавить все свойства из объекта person
 person.friends.push('Jane'); // если в масссиве person добавить имя Jane, то оно появится и в масииве shallowCopy
 console.log (shallowCopy);
+
+
+// Spread operator for Objects
+
+const  defaults = {
+    host: 'localhost',
+    dbName: 'blog',
+    user: 'admin'
+};
+
+const opts = {
+    user: 'john',
+    password:'utopia'
+};
+
+const res = {...defaults, ...opts};
+console.log(res)
