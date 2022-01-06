@@ -360,6 +360,7 @@ dog.say();
 
 //Пример 3
 // Фактически это функция конструктор
+//using new
 
 const animal = {
     say: function () {
