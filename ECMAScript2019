@@ -396,3 +396,79 @@ const cat =new Animal('Cat', 'meow');
 
 dog.say();
 cat.say();
+
+
+//Classes
+//Синтаксический сахар, не добавляют в язык структур данных, делают код более интуитивным
+
+//Пример
+//function  Animal(name, voice){
+//    this.name = name;
+//    this.voice = voice;
+//}
+
+//Animal.prototype.say = function() {
+//    console.log(this.name, 'goes' , this.voice);
+//};
+
+//const dog =new Animal('dog', 'woof');
+//dog.say();
+
+
+
+class Animal {
+    constructor(name,voice) {
+        this.name = name;   //присваиваем значение полям объекта
+        this.voice = voice; //присваиваем значение полям объекта
+    }
+
+    say() {
+        console.log(this.name, 'goes', this.voice);
+    }
+}
+
+
+
+/Classes
+//Синтаксический сахар, не добавляют в язык структур данных, делают код более интуитивным
+//function Animal(name,voice){
+//    this.name = name;
+//    this.voice = voice;
+//}
+
+//Animal.prototype.say = function() {
+//    console.log(this.name, 'goes', this.voice);
+//};
+
+//const dog =new Animal('Dog', 'woof');
+//const cat =new Animal('Cat', 'meow');
+
+//dog.say();
+//cat.say();
+
+class Animal{
+    constructor(name,voice){
+        this.name = name;
+        this.voice = voice;
+    }
+    say(){
+        console.log(this.name, 'goes', this.voice);
+    }
+
+}
+//duck->Bird.prototype->Animal.prototype->Object.prototype->null
+class Bird extends Animal {
+    constructor(name,voice, canFly) {
+        super(name,voice);
+        super.say();
+        this.canFly= canFly;
+    }
+
+    say() {
+       console.log('Birds don\'t like to talk');
+    }
+
+}
+
+const duck = new Bird('Duck', 'quack');
+duck.say();
