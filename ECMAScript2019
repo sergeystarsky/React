@@ -316,10 +316,10 @@ console.log(res)
 
 
 // Prototipes
-// setPrototypeOf-негативно сказывается на производительности приложения
+// setPrototypeOf
 
 //Пример 1
-//Object.setPrototypeof
+//Object.setPrototypeof-негативно сказывается на производительности приложения
 
 const animal = {
     say: function () {
