@@ -17,6 +17,7 @@ for (let i=0;i<3;i++){
     }, i*100);
 }
 
+// Arrow function
 function square(x){
     return x*x;
 }
